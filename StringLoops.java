@@ -10,6 +10,7 @@ public class StringLoops {
     }
     return newWord;
   }
+
   public static int[] indexesOfAll(String text, String searchTerm) {
   int[] askjhdfakjsfh = new int[0];
     for (int i = 0; i < text.length(); i++){
@@ -25,8 +26,19 @@ public class StringLoops {
     return askjhdfakjsfh;
   }
 
+  public static boolean hasRepeatedConsecutives(String a) {
+    for (int i = 0; i < a.length()-1; i++){
+      if (a.substring(i, i+1).equals(a.substring(i+1, i+2))){
+        System.out.println((a.substring(i, i+1)) + (a.substring(i+1, i+2)));
+        return true;
+      }
+    }
+    return false;
+  }
+
   public static void main(String[] args) {
     System.out.println(reverseCharacters("sans"));
     System.out.println(Arrays.toString(indexesOfAll("the quick brown fox jumped over the lazy dog", "p")));
+    System.out.println(hasRepeatedConsecutives("rook"));
   }
 }
