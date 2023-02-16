@@ -14,19 +14,19 @@ public class StringLoops {
   int[] askjhdfakjsfh = new int[0];
     for (int i = 0; i < text.length(); i++){
       if (text.substring(i, i+1).equals(searchTerm)){
-        System.out.println(i);
         int[] copy = new int[askjhdfakjsfh.length+1];
         for (int x = 0; x < askjhdfakjsfh.length; x++){
           copy[x] = askjhdfakjsfh[x];
-          copy[copy.length-1] = i;
         }
-          
+        copy[copy.length-1] = i;  
+        askjhdfakjsfh = copy;
       }
-    }return askjhdfakjsfh;
+    }
+    return askjhdfakjsfh;
   }
 
   public static void main(String[] args) {
     System.out.println(reverseCharacters("sans"));
-   System.out.println(Arrays.toString(indexesOfAll("attack", "t")));
+    System.out.println(Arrays.toString(indexesOfAll("the quick brown fox jumped over the lazy dog", "p")));
   }
 }
