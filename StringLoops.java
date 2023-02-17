@@ -29,7 +29,6 @@ public class StringLoops {
   public static boolean hasRepeatedConsecutives(String a) {
     for (int i = 0; i < a.length()-1; i++){
       if (a.substring(i, i+1).equals(a.substring(i+1, i+2))){
-        System.out.println((a.substring(i, i+1)) + (a.substring(i+1, i+2)));
         return true;
       }
     }
@@ -53,17 +52,12 @@ public class StringLoops {
     lastWord = sentence.substring(sentence.lastIndexOf(" ")+1, sentence.length());
     newSentence = newSentence + lastWord + " ";
     return newSentence;
-   
   }
-     
-    
-    
-
-
+  
   public static void main(String[] args) {
-    // System.out.println(reverseCharacters("sans"));
-    // System.out.println(Arrays.toString(indexesOfAll("the quick brown fox jumped over the lazy dog", "p")));
-    // System.out.println(hasRepeatedConsecutives("rook"));
-    System.out.println(reverseWords("piccasso was actually a horrible person and should not be remembered and his art sucks"));
+     System.out.println(reverseCharacters("sans"));
+     System.out.println(Arrays.toString(indexesOfAll("the quick brown fox jumped over a lazy dog", "t")));
+     System.out.println(hasRepeatedConsecutives("rook"));
+     System.out.println(reverseWords("piccasso was actually a horrible person and should not be remembered and his art sucks"));
   }
 }
