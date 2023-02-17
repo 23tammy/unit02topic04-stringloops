@@ -57,7 +57,7 @@ public class StringLoops {
   public static void main(String[] args) {
      System.out.println(reverseCharacters("sans"));
      System.out.println(Arrays.toString(indexesOfAll("the quick brown fox jumped over a lazy dog", "t")));
-     System.out.println(hasRepeatedConsecutives("rook"));
+     System.out.println(hasRepeatedConsecutives("roll"));
      System.out.println(reverseWords("piccasso was actually a horrible person and should not be remembered and his art sucks"));
   }
 }
