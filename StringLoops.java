@@ -36,9 +36,18 @@ public class StringLoops {
     return false;
   }
 
+  public static void reverseWords(String sentence){
+    //String newSentence = "";
+    String lastWord = sentence.substring(sentence.lastIndexOf(" ")+1, sentence.length());
+
+    System.out.println(lastWord);
+    
+  }
+
   public static void main(String[] args) {
     System.out.println(reverseCharacters("sans"));
     System.out.println(Arrays.toString(indexesOfAll("the quick brown fox jumped over the lazy dog", "p")));
     System.out.println(hasRepeatedConsecutives("rook"));
+    reverseWords("taco cat");
   }
 }
