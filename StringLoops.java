@@ -36,18 +36,34 @@ public class StringLoops {
     return false;
   }
 
-  public static void reverseWords(String sentence){
-    //String newSentence = "";
-    String lastWord = sentence.substring(sentence.lastIndexOf(" ")+1, sentence.length());
-
-    System.out.println(lastWord);
-    
+  public static String reverseWords(String sentence){
+    String newSentence = "";
+    String lastWord = "";
+    int countWords = 0;
+    for (char x : sentence.toCharArray()){
+      if (x == ' '){
+        countWords++;
+      }
+    }
+    for (int i = 0; i < countWords; i++){
+      lastWord = sentence.substring(sentence.lastIndexOf(" ")+1, sentence.length());
+      newSentence = newSentence + lastWord + " ";
+      sentence = sentence.substring(0, sentence.lastIndexOf(" "));
+    } 
+    lastWord = sentence.substring(sentence.lastIndexOf(" ")+1, sentence.length());
+    newSentence = newSentence + lastWord + " ";
+    return newSentence;
+   
   }
+     
+    
+    
+
 
   public static void main(String[] args) {
-    System.out.println(reverseCharacters("sans"));
-    System.out.println(Arrays.toString(indexesOfAll("the quick brown fox jumped over the lazy dog", "p")));
-    System.out.println(hasRepeatedConsecutives("rook"));
-    reverseWords("taco cat");
+    // System.out.println(reverseCharacters("sans"));
+    // System.out.println(Arrays.toString(indexesOfAll("the quick brown fox jumped over the lazy dog", "p")));
+    // System.out.println(hasRepeatedConsecutives("rook"));
+    System.out.println(reverseWords("piccasso was actually a horrible person and should not be remembered and his art sucks"));
   }
 }
